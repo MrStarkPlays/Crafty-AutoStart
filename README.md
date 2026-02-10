@@ -20,6 +20,24 @@ A lightweight Minecraft wake proxy for Crafty Controller. It shows a live MOTD s
 
 ## Configuration
 
+### Get API token and server ID
+
+1) In Crafty Controller, open your user/profile settings.
+2) Create a new API token and copy it.
+3) Go to Servers, open the server you want to wake, and copy its ID from the server details page.
+4) Put the values into `config.json` as `api_token` and `server_id`.
+
+### Set Minecraft server port
+
+The proxy listens on `listen_port` and forwards to the real Minecraft server on `target_port`.
+Make sure your Minecraft server is configured to use the same port as `target_port`.
+
+Example: set `target_port` to `25500` in `config.json`, then update `server.properties`:
+
+```
+server-port=25500
+```
+
 Example `config.json`:
 
 ```json
